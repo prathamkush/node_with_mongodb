@@ -56,6 +56,25 @@ exports.getNameAndAge = (req,res) => {
         })
 }
 
+// updateByName
+exports.updateAgeByName = (req,res) => {
+    UserModel.updateOne({fname:req.params.fname}, { $inc : {age : req.params.age}}, () => {
+        res.status(200).json({
+            message : "Successfully incremented "+req.params.fname+"'s age by "+req.params.age
+        })
+    })
+}
+
+// deleteUser
+exports.deleteByName = (req,res) => {
+    UserModel.deleteOne({fname:req.params.fname}, () => {
+        res.status(200).json({
+            message : "Successfully Deleted "+req.params.fname+"'s Data"
+        })
+    })
+}
+
+
 
 
 
