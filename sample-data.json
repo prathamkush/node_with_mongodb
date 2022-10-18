@@ -1,0 +1,32 @@
+[
+    {
+        "fname": "Alice",
+        "lname": "Parker",
+        "email": "alice@gmail.com",
+        "age": 22
+    },
+    {
+        "fname": "Carol",
+        "lname": "Stark",
+        "email": "carol@gmail.com",
+        "age": 70
+    },
+    {
+        "fname": "Bob",
+        "lname": "Potter",
+        "email": "bob@gmail.com",
+        "age": 40
+    },
+    {
+        "fname": "Dave",
+        "lname": "Mosby",
+        "email": "dave@gmail.com",
+        "age": 33
+    },
+    {
+        "fname": "Eve",
+        "lname": "Aldrin",
+        "email": "eve@gmail.com",
+        "age": 22
+    }
+]
