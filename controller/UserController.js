@@ -16,3 +16,46 @@ exports.addUser = (req,res) => {
             res.send(error)
         })
 }
+
+// getAll
+exports.getUsers = (req,res) => {
+    const users = UserModel.find()
+    users.
+        then( (data) => {
+            res.send(data)
+        }).
+        catch( (error) => {
+            res.send(error)
+        })
+}
+
+// getByName (q1)
+exports.getByName = (req,res) => {
+    const users = UserModel.find({fname:req.params.fname})
+    users.
+        then( (data) => {
+            res.send(data)
+        }).
+        catch( (error) => {
+            res.send(error)
+        })
+}
+
+// show custom fields (q2)
+exports.getNameAndAge = (req,res) => {
+    const users = UserModel.find({},{fname:1, age:1})
+    users.
+        then( (data) => {
+            res.status(200).json({
+                message:"Successfully got name and age",
+                data:data,
+            })
+        }).
+        catch( (error) => {
+            res.send(error)
+        })
+}
+
+
+
+
