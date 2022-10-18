@@ -13,10 +13,13 @@ app.listen(3000, () => {
     console.log("Server running on port 3000")
 })
 
+app.use(express.json())
+
 // default route ("/") with response of a string
-app.use("/", (req,res) => { res.send("Welcome to node application here") })
+app.use("/welcome", (req,res) => { res.send("Welcome to node application here") })
 
 app.use("/user", routes)
+
 
 // connecting to a database with mongoose library (mongoose.connect())
 const uri = "mongodb+srv://pratham520:451228@cluster0.pe7oqtx.mongodb.net/employeeNodejs?retryWrites=true&w=majority" 
